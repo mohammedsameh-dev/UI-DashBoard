@@ -157,6 +157,9 @@ header .down img {
   height: 80%;
   padding: 15px 30px;
   display: flex;
+  @media screen and (max-width:768px) {
+    background-color: white ;
+  }
 }
 
 .content .left {
@@ -231,5 +234,93 @@ header .down img {
   img{
     width: 40px;
     height: 40px;
+  }
+}
+/* ------------------- Responsive ------------------- */
+
+@media screen and (max-width: 1024px) {
+  header .up .left input {
+    width: 400px;
+      overflow:hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .content .left,
+  .content .right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  aside {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  header .up {
+    flex-direction: column;
+    gap: 15px;
+      overflow:hidden;
+
+  }
+
+  header .up .left input {
+    width: 100%;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card,
+  .anno,
+  .trend {
+    width: 90%;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    padding: 10px;
+      overflow:hidden;
+
+  }
+
+  .down {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .card,
+  .anno,
+  .trend {
+    width: 100%;
   }
 }
